@@ -18,6 +18,16 @@ The Arduino interfaces with the Nunchuk using the [I2C](http://en.wikipedia.org/
 simple protocol thats easy to grasp. And what makes it even more easier is the [Wire](http://arduino.cc/en/Reference/Wire) library that can be used along with the Arduino. With the help of this library we can forget all the 
 tedious time keeping, clock signal generation and sychnronization hassels and just focus on talking to the Nunchuk.
 
+###Baby Steps - (Talking to the Nunchuk)
+--------------------
+
+The process of getting the data from the Nunchuk follows the process shown in the below diagram:
+
+![alt text](http://a.pragprog.com/magazines/2011-08/images/nunchuck_communications__11l1a7__.jpg)
+
+The communication with the Nunchuk is initiated by sending a Handshake message to the Nunchuk and then by sending a data request
+each time we want the latest Gamepad state.
+
 ###WTFH do those bytes mean ? - (Data Structure)
 --------------------
 
@@ -59,9 +69,9 @@ And the Pin mapping are as follows:
 
 Uno, Ethernet	|	A4	-->	(Data)	,A5	-->	(Clock)
 
-Mega2560		|	20	--> (Data)	,21	-->	(Clock)
+Mega2560		  |	20	--> (Data)	,21	-->	(Clock)
 
-Leonardo		|	2	-->	(Data)	,3	-->	(Clock)
+Leonardo		  |	2	-->	(Data)  	,3	-->	(Clock)
 
 Note: Older Versions of the Arduno boards have similar pin configurations in order to allow the new boards to support older shields and hence 
 will most likely have the same pin-out configurations as the newer counterparts.
@@ -91,8 +101,6 @@ void setup() {
 
 // the loop routine runs over and over again forever:
 void loop() {
-  // read the input on analog pin 0:
-  //int sensorValue = analogRead(A0);
   // print out the value you read:
   _controller.update();
   Serial.print("Z: ");
@@ -124,6 +132,7 @@ void loop() {
 -------------------
 * [Make Your Own Video Game System](http://pragprog.com/magazines/2011-08/make-your-own-video-game-system)
 * [Maik Schmidt](https://github.com/maik) for the creating the original version of this library.
+* [Reading the Wii Nunchuk data on the Arduino](http://www.windmeadow.com/node/42)
 * And the deus Ex- Machina that led me to the project in the first place !
 
 
