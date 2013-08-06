@@ -75,8 +75,7 @@ will most likely have the same pin-out configurations as the newer counterparts.
 
 ##Show me some example code !
 
-'''
-
+```
 #include <Nunchuk.h>
 #include <Wire.h>
 
@@ -120,8 +119,7 @@ void loop() {
   delay(1);        // delay in between reads for stability
 }
 
-'''
-
+```
 ##I didn't figure out all of this on my own ! (Credits)
 -------------------
 * [Make Your Own Video Game System](http://pragprog.com/magazines/2011-08/make-your-own-video-game-system)
