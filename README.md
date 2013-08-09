@@ -3,16 +3,16 @@
 
 
 #ArduinoNunchuk
----------------
+
 
 This project is a Library inteded to use with the Arduino framework. It creates a simple interface by which the Arduino can read the state
 of the Wii Nunchuk using the I2C interface with the help of the Wire Library.
 
 The project is based on the Nunchuk Library created in an article [Make Your Own Video Game System](http://pragprog.com/magazines/2011-08/make-your-own-video-game-system). 
-But unfortunately the Nunchuk library created in this article is obsolete because of the API changes in teh Wire library.
+But unfortunately the Nunchuk library created in this article is obsolete because of the API changes in the Wire library.
 
 ##Does it run on Magic Smoke ? (Of course not ! its I2C...)
--------------------
+
 
 The Arduino interfaces with the Nunchuk using the [I2C](http://en.wikipedia.org/wiki/I%C2%B2C) protocol. Though it might seem challenging to learn a new protocol, In reality its a very
 simple protocol thats easy to grasp. And what makes it even more easier is the [Wire](http://arduino.cc/en/Reference/Wire) library that can be used along with the Arduino. With the help of this library we can forget all the 
@@ -129,7 +129,7 @@ void loop() {
 
 ```
 ##I didn't figure out all of this on my own ! (Credits)
--------------------
+
 * [Make Your Own Video Game System](http://pragprog.com/magazines/2011-08/make-your-own-video-game-system)
 * [Maik Schmidt](https://github.com/maik) for the creating the original version of this library.
 * [Reading the Wii Nunchuk data on the Arduino](http://www.windmeadow.com/node/42)
